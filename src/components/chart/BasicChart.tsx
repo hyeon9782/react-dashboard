@@ -1,18 +1,20 @@
 import { useRef } from 'react';
 import * as Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official'
+import HighchartsReact from 'highcharts-react-official';
 
 const options = {
   title: {
-    text: 'My chart'
+    text: 'My chart',
   },
-  series: [{
-    data: [1, 2, 3]
-  }]
-}
+  series: [
+    {
+      data: [1, 2, 3],
+    },
+  ],
+};
 
 const BasicChart = (props: HighchartsReact.Props) => {
-    const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
+  const chartComponentRef = useRef<HighchartsReact.RefObject>(null);
 
   return (
     <HighchartsReact
@@ -22,6 +24,6 @@ const BasicChart = (props: HighchartsReact.Props) => {
       {...props}
     />
   );
-}
+};
 
-export default BasicChart
+export default BasicChart;
