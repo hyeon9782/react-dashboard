@@ -27,6 +27,21 @@ const AppRouter = () => {
               <HomePage />
             </Suspense>
           ),
+          action: async ({ params, request }) => {
+            return new Promise((resolve) => {
+              return setTimeout(() => {
+                resolve('success');
+              }, 1000);
+            });
+          },
+        },
+        {
+          path: '/dashboard',
+          element: (
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomePage />
+            </Suspense>
+          ),
         },
         {
           path: '/login',
