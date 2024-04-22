@@ -4,8 +4,8 @@ import App from '../App';
 import NotFoundPage from '@/pages/NotFoundPage';
 import HomePage from '@/pages/HomePage';
 import LoginPage from '@/pages/LoginPage';
-import JobStatusPage from '../pages/job/JobStatusPage';
-import JobPlanningPage from '../pages/job/JobPlanningPage';
+import JobStatusPage from '../pages/job/status';
+import JobPlanningPage from '../pages/job/planning';
 import SearchedProteinResultPage from '../pages/searched/protein';
 import SearchedGlycoproteinResultPage from '../pages/searched/glycoprotein';
 import StatisticsProteinResultPage from '../pages/statistics/protein';
@@ -34,14 +34,6 @@ const AppRouter = () => {
               }, 1000);
             });
           },
-        },
-        {
-          path: '/dashboard',
-          element: (
-            <Suspense fallback={<div>Loading...</div>}>
-              <HomePage />
-            </Suspense>
-          ),
         },
         {
           path: '/login',
