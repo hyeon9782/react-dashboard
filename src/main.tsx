@@ -6,9 +6,9 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import './index.css';
 
-if (process.env.NODE_ENV === 'development') {
-  worker.start();
-}
+// if (process.env.NODE_ENV === 'development') {
+//   worker.start();
+// }
 
 const quetyClient = new QueryClient({
   defaultOptions: {
