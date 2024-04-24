@@ -4,8 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import useResultsQuery from '@/services/queries/useResultsQuery';
 
 const HomePage = () => {
+  const { results } = useResultsQuery({ userId: 1 });
+
+  console.log(results);
+
   return (
     <div>
       <Accordion type="single" collapsible>
