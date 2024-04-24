@@ -36,6 +36,7 @@ const LoginPage = () => {
           value={formData.password}
           onChange={changeForm}
         />
+        <button>Login</button>
       </form>
     </div>
   );

@@ -1,5 +1,7 @@
 import { instance } from "@/apis/instance"
+import { tokenAtom } from "@/stores/tokenAtom";
 import { useMutation } from "@tanstack/react-query"
+import { useSetAtom } from "jotai";
 
 type LoginUser = {
     email: string;
@@ -8,12 +10,15 @@ type LoginUser = {
 
 const useAuth = () => {
 
+    const setToken = useSetAtom(tokenAtom)
+
     // 로그인
     const { mutate: login } = useMutation({
         mutationFn: async (loginUser: LoginUser) => await instance.post('user/sign-in', loginUser),
         onSuccess: (response) => {
             console.log(response);
-            
+            localStorage.setItem('token', response.data.token)
+            // setToken(response.data)
             alert('로그인에 성공했습니다.')
         },
         onError: (error) => {
