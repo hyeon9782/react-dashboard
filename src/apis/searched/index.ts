@@ -1,69 +1,69 @@
 import { instance } from "../instance"
 
-const getProteinSummaryTables = (analysisNo: string) => {
-    return instance.get(`/v2/api/protein/summary-tables/${analysisNo}`)
+const getProteinSummaryTables = async (analysisNo: string) => {
+    return await instance.get(`/v2/api/protein/summary-tables/${analysisNo}`)
 }
 
-const getProteinSummaryCharts = (fileId: string) => {
-    return instance.get(`/v2/api/protein/summary-charts/${fileId}`)
+const getProteinSummaryCharts = async (fileId: string) => {
+    return await instance.get(`/v2/api/protein/summary-charts/${fileId}`)
 }
 
-const getProteinQuantificationTables = (fileIds: string) => {
-    return instance.get(`/v2/api/protein/quantification-tables/${fileIds}`)
+const getProteinQuantificationTables = async (fileIds: string) => {
+    return await instance.get(`/v2/api/protein/quantification-tables/${fileIds}`)
 }
 
-const getProteinQuantificationTablesAll = (fileIds: string) => {
-    return instance.get(`/v2/api/protein/quantification-tables/${fileIds}/all`)
+const getProteinQuantificationTablesAll = async (fileIds: string) => {
+    return await instance.get(`/v2/api/protein/quantification-tables/${fileIds}/all`)
 }
 
-const getProteinQuantificationCharts = (type: string, fileIds: string) => {
-    return instance.get(`/v2/api/protein/quantification-charts/${type}/${fileIds}`)
+const getProteinQuantificationCharts = async (type: string, fileIds: string) => {
+    return await instance.get(`/v2/api/protein/quantification-charts/${type}/${fileIds}`)
 }
 
-const getProteinIdentificationTables = (fileIds: string) => {
-    return instance.get(`/v2/api/protein/identification-tables/${fileIds}`)
+const getProteinIdentificationTables = async (fileIds: string) => {
+    return await instance.get(`/v2/api/protein/identification-tables/${fileIds}`)
 }
 
-const getProteinIdentificationTablesAll = (fileIds: string) => {
-    return instance.get(`/v2/api/protein/identification-tables/${fileIds}/all`)
+const getProteinIdentificationTablesAll = async (fileIds: string) => {
+    return await instance.get(`/v2/api/protein/identification-tables/${fileIds}/all`)
 }
 
-const getProteinIdentificationCharts = (type: string, fileIds: string) => {
-    return instance.get(`/v2/api/protein/identification-charts/${type}/${fileIds}`)
+const getProteinIdentificationCharts = async (type: string, fileIds: string) => {
+    return await instance.get(`/v2/api/protein/identification-charts/${type}/${fileIds}`)
 }
 
 /* =================================================================================================== */
 
-const getGlycoproteinSummaryTables = (analysisNo: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/summary-tables/${analysisNo}`)
+const getGlycoproteinSummaryTables = async (analysisNo: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/summary-tables/${analysisNo}`)
 }
 
-const getGlycoproteinSummaryCharts = (fileId: string, type: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/summary-charts/${type}/${fileId}`)
+const getGlycoproteinSummaryCharts = async (fileId: string, type: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/summary-charts/${type}/${fileId}`)
 }
 
-const getGlycoproteinQuantificationTables = (fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/quantification-tables/${fileIds}`)
+const getGlycoproteinQuantificationTables = async (fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/quantification-tables/${fileIds}`)
 }
 
-const getGlycoproteinQuantificationTablesAll = (fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/quantification-tables/${fileIds}/all`)
+const getGlycoproteinQuantificationTablesAll = async (fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/quantification-tables/${fileIds}/all`)
 }
 
-const getGlycoproteinQuantificationCharts = (type: string, fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/quantification-charts/${type}/${fileIds}`)
+const getGlycoproteinQuantificationCharts = async (type: string, fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/quantification-charts/${type}/${fileIds}`)
 }
 
-const getGlycoproteinIdentificationTables = (fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/identification-tables/${fileIds}`)
+const getGlycoproteinIdentificationTables = async (fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/identification-tables/${fileIds}`)
 }
 
-const getGlycoproteinIdentificationTablesAll = (fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/identification-tables/${fileIds}/all`)
+const getGlycoproteinIdentificationTablesAll = async (fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/identification-tables/${fileIds}/all`)
 }
 
-const getGlycoproteinIdentificationCharts = (type: string, fileIds: string) => {
-    return instance.get(`/v2/api/glycoprotein/searched/identification-charts/${type}/${fileIds}`)
+const getGlycoproteinIdentificationCharts = async (type: string, fileIds: string) => {
+    return await instance.get(`/v2/api/glycoprotein/searched/identification-charts/${type}/${fileIds}`)
 }
 
 
