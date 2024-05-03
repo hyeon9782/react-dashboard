@@ -1,5 +1,6 @@
 import useAuth from '@/services/mutation/useAuth';
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { SHA512 } from 'crypto-js';
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +20,10 @@ const LoginPage = () => {
 
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
-    login(formData);
+    login({
+      email: formData.email,
+      password: SHA512(formData.password).toString(),
+    });
   };
   return (
     <div>
